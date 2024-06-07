@@ -22,7 +22,7 @@ func (w *worker) run() {
 			fmt.Printf("[ %s ] processing id %d\n", w.name, x)
 			time.Sleep(2 * time.Second)
 		case <-w.ctx.Done():
-			fmt.Printf("[ %s ] context finished\n", w.name)
+			fmt.Printf("[ %s ] context done\n", w.name)
 		}
 	}
 }
